@@ -6,12 +6,14 @@ link_libraries(${Pangolin_LIBRARIES})
 
 find_package(CUDA QUIET)
 
+include_directories(${CUDA_INCLUDE_DIRS})
+
 # This example could be made to work with C++11, but the kernel code must be
 # compiled without it.
 if(CUDA_FOUND)
-  cuda_include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+  include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-  cuda_add_executable(
+  add_executable(
     VBODisplay
     main.cpp kernal.cu
   )

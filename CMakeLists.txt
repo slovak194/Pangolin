@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.8.12)
-project("Pangolin")
+cmake_minimum_required(VERSION 3.11)
+project("Pangolin" LANGUAGES CXX C CUDA)
 set(PANGOLIN_VERSION_MAJOR 0)
 set(PANGOLIN_VERSION_MINOR 5)
 set(PANGOLIN_VERSION ${PANGOLIN_VERSION_MAJOR}.${PANGOLIN_VERSION_MINOR})
