@@ -22,10 +22,10 @@ if(BUILD_PANGOLIN_GUI)
 
 #      # This sample fails on many platforms, so exclude it for now,
 #      # until we can create a better cmake test for support.
-#      find_package(CUDA QUIET)
-#      if( CUDA_FOUND )
-#        add_subdirectory(VBODisplay)
-#      endif()
+      find_package(CUDA QUIET)
+      if( CUDA_FOUND )
+        add_subdirectory(VBODisplay)
+      endif()
 
     endif()
 endif()
